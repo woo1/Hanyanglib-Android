@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isSeoul){
+                    //팝업 화면 띄우기
                     Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
                     intent.putExtra("data1", "백남학술정보관");
                     intent.putExtra("data2", "법학학술정보관");
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         campusTxtv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //팝업 화면 띄우기
                 Intent intent = new Intent(getApplicationContext(), PopupActivity.class);
                 intent.putExtra("data1", "서울");
                 intent.putExtra("data2", "ERICA");
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 String name = item.getName();
                 String linkURL = item.getLinkURL();
 
+                //웹뷰 화면 전환
                 Intent intent = new Intent(getApplicationContext(), WebviewActivity.class);
                 String url = "http://libgate.hanyang.ac.kr/seats/"+linkURL;
                 String js  = "";
